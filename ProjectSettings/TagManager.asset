@@ -12,6 +12,7 @@ TagManager:
   - FxTemporaire
   - Ground
   - Car
+  - Fish
   layers:
   - Default
   - TransparentFX
