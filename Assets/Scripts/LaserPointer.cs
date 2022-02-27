@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Valve.VR;
 
 public class LaserPointer : MonoBehaviour
 {
     public LayerMask whatIsClickable;
+    public SteamVR_Action_Boolean grabPinch;
+    public SteamVR_Input_Sources thisHand;
 
-    private LineRenderer lr;
     private float maxDistance = 100f;
+    private LineRenderer lr;
     private Vector3 clickPoint;
+    private string signName;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +23,44 @@ public class LaserPointer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics.Raycast(transform.position, transform.forward * 20f);
-        
+        lr.SetColors(Color.black, Color.black);
+        lr.SetPosition(0, transform.position);
+        lr.SetPosition(1, transform.position + transform.forward * 20f);
+        if (grabPinch.GetStateDown(thisHand))
+		{
+            DetectHit();
+		}
+    }
+
+	void  DetectHit()
+	{
         RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.forward, out hit, maxDistance, whatIsClickable))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance, whatIsClickable))
         {
             clickPoint = hit.point;
-            lr.positionCount = 2;
+            signName = hit.transform.gameObject.name;
+
+            if (signName == "play")
+			{
+                PlayGame();
+			}
+            else if (signName == "exit")
+			{
+                ExitGame();
+			}
+
         }
-        lr.SetPosition(0, transform.forward);
-        lr.SetPosition(1, transform.forward * 20f);
     }
+
+    void PlayGame()
+	{
+        Debug.Log("Play Game");
+        SceneManager.LoadScene("main");
+	}
+
+    void ExitGame()
+	{
+        Debug.Log("Exit Game");
+	}
+
 }
