@@ -8,7 +8,15 @@ public class FishManager : MonoBehaviour
 		Debug.Log(other.transform.gameObject.name);
 		if(other.transform.gameObject.tag == "Fish"){
 			Debug.Log("Hit fish.");
-			other.transform.gameObject.SetActive(false);
+			other.transform.gameObject.GetComponent<WanderingAI>().dead = true;
+			other.transform.gameObject.GetComponent<WanderingAI>().setDeathDestination();
+			other.transform.gameObject.transform.GetChild(2).gameObject.GetComponent<ParticleSystem>().Play();
+			StartCoroutine(fishDelay(other));
 		}
+	}
+	
+	private IEnumerator fishDelay(Collider other){
+		yield return new WaitForSeconds(3);
+		other.transform.gameObject.SetActive(false);
 	}
 }

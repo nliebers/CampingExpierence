@@ -5,10 +5,17 @@ public class WanderingAI : MonoBehaviour {
  
     public float wanderRadius;
     public float wanderTimer;
+	public bool dead = false;
  
     private Transform target;
+	private Animation movingAnim;
     private UnityEngine.AI.NavMeshAgent agent;
     private float timer;
+ 
+	private void Start() {
+		movingAnim = transform.GetComponent<Animation>();
+		movingAnim.Play("fin");
+	}
  
     void OnEnable () {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
@@ -18,7 +25,7 @@ public class WanderingAI : MonoBehaviour {
     void Update () {
         timer += Time.deltaTime;
  
-        if (timer >= wanderTimer) {
+        if (timer >= wanderTimer && !dead) {
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
 			FaceTarget(newPos);
             agent.SetDestination(newPos);
@@ -45,4 +52,12 @@ public class WanderingAI : MonoBehaviour {
  
         return navHit.position;
     }
+	
+	public void setDeathDestination(){
+		Vector3 dest = transform.position + new Vector3(0.0f, 1.0f, 0.0f);
+		movingAnim.Stop("fin");
+		movingAnim.Play("dead");
+		agent.ResetPath();
+		agent.SetDestination(dest);
+	}
 }
