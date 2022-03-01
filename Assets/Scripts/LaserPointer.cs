@@ -54,13 +54,12 @@ public class LaserPointer : MonoBehaviour
 
     void PlayGame()
 	{
-        Debug.Log("Play Game");
         SceneManager.LoadScene("main");
 	}
 
     void ExitGame()
 	{
-        Debug.Log("Exit Game");
+        Application.Quit();
 	}
 
 }
