@@ -6,10 +6,12 @@ public class WanderingAI : MonoBehaviour {
     public float wanderRadius;
     public float wanderTimer;
 	public bool dead = false;
+    public GameObject player;
  
     private Transform target;
 	private Animation movingAnim;
     private UnityEngine.AI.NavMeshAgent agent;
+    private bool beingHunted = false;
     private float timer;
  
 	private void Start() {
@@ -24,12 +26,29 @@ public class WanderingAI : MonoBehaviour {
  
     void Update () {
         timer += Time.deltaTime;
- 
-        if (timer >= wanderTimer && !dead) {
+
+        if (Vector3.Distance(player.transform.position, transform.position) <= 2.0f)
+        {
+            beingHunted = true;
+        }
+        else {
+            beingHunted = false;
+            agent.speed = 0.1f;
+        }
+
+        if (timer >= wanderTimer && !dead && !beingHunted)
+        {
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
-			FaceTarget(newPos);
+            FaceTarget(newPos);
             agent.SetDestination(newPos);
             timer = 0;
+        }
+        else if (beingHunted) {
+            Debug.Log("being hunted");
+            agent.speed = 2.5f;
+            Vector3 newPos = player.transform.forward * 7.0f;
+            FaceTarget(newPos);
+            agent.SetDestination(newPos);
         }
     }
 	

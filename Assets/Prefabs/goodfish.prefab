@@ -4921,7 +4921,7 @@ Transform:
   - {fileID: 1416176929464095894}
   m_Father: {fileID: 4653342173370703974}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0.2496562, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 6.5666027, z: 0}
 --- !u!1 &2172614556872178421
 GameObject:
   m_ObjectHideFlags: 0
@@ -5529,6 +5529,7 @@ MonoBehaviour:
   wanderRadius: 4
   wanderTimer: 5
   dead: 0
+  player: {fileID: 0}
 --- !u!111 &5465169420138232544
 Animation:
   m_ObjectHideFlags: 0
