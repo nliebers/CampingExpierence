@@ -112,19 +112,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpSpecMap:
-        m_Texture: {fileID: 2800000, guid: 4ef0e4f288bc40249ac9c68a50114447, type: 3}
+        m_Texture: {fileID: 2800000, guid: 89f8e619729c6db45afa98fee3c6f9eb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2c8b35b0fde301740b96a3435d9a1918, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8a1f117e0cb3f1b4dbcf2689cb076e56, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTex:
-        m_Texture: {fileID: 2800000, guid: 71062ee7019f6d34394e6ab917305648, type: 3}
+        m_Texture: {fileID: 2800000, guid: c03d7811fe6543d40aab82137be0af84, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
-        m_Texture: {fileID: 2800000, guid: 6faec6c4802f2124da0037e7520e1b92, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8cf7b1254f3dbb6409e2d9e2cd226862, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -159,15 +159,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpSpecMap:
-        m_Texture: {fileID: 2800000, guid: 4ef0e4f288bc40249ac9c68a50114447, type: 3}
+        m_Texture: {fileID: 2800000, guid: 89f8e619729c6db45afa98fee3c6f9eb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2c8b35b0fde301740b96a3435d9a1918, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8a1f117e0cb3f1b4dbcf2689cb076e56, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
-        m_Texture: {fileID: 2800000, guid: 6faec6c4802f2124da0037e7520e1b92, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8cf7b1254f3dbb6409e2d9e2cd226862, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 3381
-  materialHash: f4a3fe5713a4adfdeb66c54e412553f9215482368
+  materialHash: cbe2ef05fa35dcb92488226df53ea634215482368
   root:
     _uniqueID: 1
     seed: 1234
