@@ -9,6 +9,7 @@ public class LaserPointer : MonoBehaviour
     public LayerMask whatIsClickable;
     public SteamVR_Action_Boolean grabPinch;
     public SteamVR_Input_Sources thisHand;
+    public GameObject playSign;
 
     private float maxDistance = 100f;
     private LineRenderer lr;
@@ -54,8 +55,9 @@ public class LaserPointer : MonoBehaviour
 
     void PlayGame()
 	{
-        SceneManager.LoadScene("main");
-	}
+        // SceneManager.LoadScene("main");
+        playSign.transform.Find("LoadLevel").transform.gameObject.SetActive(true);
+    }
 
     void ExitGame()
 	{
