@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7432170931944721669}
   - component: {fileID: 7432170931945852869}
   - component: {fileID: 7432170931950157733}
+  - component: {fileID: 8993774873733908622}
   m_Layer: 0
   m_Name: leaves
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7432170931948048645}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.000000029802326, y: -0.000000014901163, z: -0.02062668, w: 0.9997873}
+  m_LocalPosition: {x: 0.0038988374, y: 0.003165043, z: -0.000006383052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7432170931947621671}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.045499407, y: 0.015166469, z: 0.045499407}
 --- !u!33 &7432170931944721669
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -96,6 +97,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: bcd958b8c15a1fa41adc720ee6acb3d0, type: 3}
+--- !u!111 &8993774873733908622
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7432170931948048645}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9ab079ddccd4f884c922cc6a709dc721, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9ab079ddccd4f884c922cc6a709dc721, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 1
+  m_CullingType: 0
 --- !u!1 &7432170931948048647
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +142,7 @@ Transform:
   m_GameObject: {fileID: 7432170931948048647}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -33.52052, y: 0.0111250095, z: 44.75274}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 7432170931947621669}
   m_Father: {fileID: 0}
