@@ -16,10 +16,9 @@ public class RaftController : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(player.transform.position, transform.position) <= 2.0f ){
+        if (Vector3.Distance(player.transform.position, transform.position) <= 5.0f ){
 			player.transform.position = mountPoint.transform.position;
 			Vector3 newPos = sailDirection.transform.forward * 1.0f;
-			Debug.Log(sailDirection.transform.forward);
             agent.SetDestination(transform.position + newPos);
 		}
     }
