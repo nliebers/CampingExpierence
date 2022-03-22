@@ -35,17 +35,27 @@ namespace Valve.VR.InteractionSystem
 		}
 		
 		public void SpearReleased(){
+			Debug.Log("released");
 			released = true;
 			
 			RaycastHit[] hits = Physics.SphereCastAll( transform.position, 0.01f, transform.forward, 0.80f, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore );
-			
-			transform.GetComponent<Rigidbody>().velocity = tip.transform.forward * 20;
-			
-			if (leftHand != null || rightHand != null){
+
+			StartCoroutine(ThrowSpearAfterRelease(0.05f));
+		}
+
+		private IEnumerator ThrowSpearAfterRelease(float wait)
+		{
+			Vector3 tipForward = tip.transform.forward;
+
+			yield return new WaitForSeconds(wait);
+			transform.GetComponent<Rigidbody>().velocity = tipForward * 20;
+
+			if (leftHand != null || rightHand != null)
+			{
 				Vector3 greatestVelo = Vector3.Max(leftHand.GetComponent<HandPhysics>().handCollider.GetComponent<Rigidbody>().velocity, rightHand.GetComponent<HandPhysics>().handCollider.GetComponent<Rigidbody>().velocity);
-				transform.GetComponent<Rigidbody>().velocity = tip.transform.forward += greatestVelo;
+				transform.GetComponent<Rigidbody>().velocity = tipForward * greatestVelo.magnitude * 10f;
 			}
-			
+
 			travelledFrames = 0;
 			prevPosition = transform.position;
 			prevRotation = transform.rotation;
