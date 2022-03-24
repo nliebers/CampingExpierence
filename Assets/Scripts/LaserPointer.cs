@@ -10,6 +10,7 @@ public class LaserPointer : MonoBehaviour
     public SteamVR_Action_Boolean grabPinch;
     public SteamVR_Input_Sources thisHand;
     public GameObject playSign;
+    public GameObject player;
 
     private float maxDistance = 100f;
     private LineRenderer lr;
@@ -40,7 +41,6 @@ public class LaserPointer : MonoBehaviour
         {
             clickPoint = hit.point;
             signName = hit.transform.gameObject.name;
-
             if (signName == "play")
 			{
                 PlayGame();
@@ -57,6 +57,20 @@ public class LaserPointer : MonoBehaviour
 	{
         // SceneManager.LoadScene("main");
         playSign.transform.Find("LoadLevel").transform.gameObject.SetActive(true);
+
+    }
+
+    IEnumerator ResetPlayer()
+    {
+        player.SetActive(false);
+        while(true)
+        {
+            string sceneName = SceneManager.GetActiveScene().name;
+            if (sceneName == "main")
+            {
+                yield return new WaitForSeconds(.5f);
+            }
+        }
     }
 
     void ExitGame()
