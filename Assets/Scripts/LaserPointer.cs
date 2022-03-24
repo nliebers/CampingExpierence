@@ -62,12 +62,14 @@ public class LaserPointer : MonoBehaviour
 
     IEnumerator ResetPlayer()
     {
-        player.SetActive(false);
+        //player.SetActive(false);
         while(true)
         {
             string sceneName = SceneManager.GetActiveScene().name;
             if (sceneName == "main")
             {
+                player.SetActive(true);
+                player.transform.position = new Vector3(0, 100, 0);
                 yield return new WaitForSeconds(.5f);
             }
         }
