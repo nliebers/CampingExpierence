@@ -11,16 +11,14 @@ public class JournalController : MonoBehaviour
 
     void Update()
     {
-        if (!grabPinch.GetStateDown(leftHand))
+        if (!grabPinch.GetState(leftHand))
 		{
             journal.SetActive(false);
 		}
     }
 	
 	void OnTriggerExit(Collider other){
-		Debug.Log(grabPinch.GetStateDown(leftHand));
-		Debug.Log(other.transform.gameObject.name);
-		if (grabPinch.GetStateDown(leftHand) && other.transform.gameObject.tag == "Player"){
+		if (grabPinch.GetState(leftHand) && other.transform.gameObject.name == "LeftHand"){
 			journal.SetActive(true);
 		}
 	}
