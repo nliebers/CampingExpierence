@@ -32,6 +32,10 @@ public class LaserPointer : MonoBehaviour
 		{
             DetectHit();
 		}
+        if(SceneManager.GetActiveScene().name == "main")
+        {
+            lr.enabled = false;
+        }
     }
 
 	void  DetectHit()
@@ -57,7 +61,8 @@ public class LaserPointer : MonoBehaviour
 	{
         // SceneManager.LoadScene("main");
         playSign.transform.Find("LoadLevel").transform.gameObject.SetActive(true);
-
+        StartCoroutine(LevelManager.Instance.ResetPlayer());
+        //ResetPlayer();
     }
 
     IEnumerator ResetPlayer()
@@ -68,6 +73,8 @@ public class LaserPointer : MonoBehaviour
             string sceneName = SceneManager.GetActiveScene().name;
             if (sceneName == "main")
             {
+                player.SetActive(false);
+                player = GameObject.Find("MainPlayer");
                 player.SetActive(true);
                 player.transform.position = new Vector3(0, 100, 0);
                 yield return new WaitForSeconds(.5f);
