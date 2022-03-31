@@ -413,8 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sparked: 0
-  sparkingVelocity: 2
-  fireProximity: 5
+  fireProximity: 100
   player: {fileID: 0}
   CampFire: {fileID: 0}
   fireRing: {fileID: 0}

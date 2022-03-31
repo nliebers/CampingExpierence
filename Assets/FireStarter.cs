@@ -27,15 +27,6 @@ namespace Valve.VR.InteractionSystem
         public GameObject tip;
 
 
-        void Update()
-        {
-            if (Vector3.Distance(player.transform.position, transform.position) <= 5.0f)
-            {
-                player.transform.position = fireRing.transform.position;
-                // 
-            }
-        }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.transform.gameObject.tag == "FireStick") {
