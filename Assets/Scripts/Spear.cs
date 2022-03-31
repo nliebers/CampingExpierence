@@ -40,7 +40,7 @@ namespace Valve.VR.InteractionSystem
 			
 			RaycastHit[] hits = Physics.SphereCastAll( transform.position, 0.01f, transform.forward, 0.80f, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore );
 
-			StartCoroutine(ThrowSpearAfterRelease(0.05f));
+			StartCoroutine(ThrowSpearAfterRelease(0.01f));
 		}
 
 		private IEnumerator ThrowSpearAfterRelease(float wait)

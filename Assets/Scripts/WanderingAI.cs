@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
  
 public class WanderingAI : MonoBehaviour {
  
@@ -7,6 +8,7 @@ public class WanderingAI : MonoBehaviour {
     public float wanderTimer;
 	public bool dead = false;
     public GameObject player;
+	public TextMeshProUGUI fishingTask;
  
     private Transform target;
 	private Animation movingAnim;
@@ -74,6 +76,7 @@ public class WanderingAI : MonoBehaviour {
 	
 	public void setDeathDestination(){
 		Vector3 dest = transform.position + new Vector3(0.0f, 1.0f, 0.0f);
+		fishingTask.text = "<s>-  Catch Fish</s>";
 		movingAnim.Stop("fin");
 		movingAnim.Play("dead");
 		agent.ResetPath();

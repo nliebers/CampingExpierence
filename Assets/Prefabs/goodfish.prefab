@@ -5530,6 +5530,7 @@ MonoBehaviour:
   wanderTimer: 5
   dead: 0
   player: {fileID: 0}
+  fishingTask: {fileID: 0}
 --- !u!111 &5465169420138232544
 Animation:
   m_ObjectHideFlags: 0
