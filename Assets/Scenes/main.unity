@@ -13203,7 +13203,7 @@ MonoBehaviour:
   postCardJounalEntry: {fileID: 1677937558}
   suitcaseJournalEntry: {fileID: 1918796403}
   flightmagazineJournalEntry: {fileID: 2050830006}
-  airplaneWingJournalEntry: {fileID: 2050830006}
+  airplaneWingJournalEntry: {fileID: 987592681}
 --- !u!82 &832040879
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16368,6 +16368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0d21cd28590bbc47acda6deb8afc734, type: 3}
+--- !u!1 &987592681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5862166321050700836, guid: a0d21cd28590bbc47acda6deb8afc734, type: 3}
+  m_PrefabInstance: {fileID: 987592680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &989353274 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432170931947621671, guid: e397985946f918d4d84873a33044fe68, type: 3}
@@ -27927,6 +27932,25 @@ Transform:
   m_Father: {fileID: 1060567345}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1790189659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4533379348847702616, guid: a96a7b2f402d1004fab0a48d2a6c4fad, type: 3}
+  m_PrefabInstance: {fileID: 885649799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1790189661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790189659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20aa762216a995449960a63dda6a547c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHand: {fileID: 261356895}
+  rightHand: {fileID: 1762246299}
 --- !u!4 &1790958044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432170931947621671, guid: e397985946f918d4d84873a33044fe68, type: 3}
