@@ -16,15 +16,11 @@ public class HandleManager : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(Vector3.Distance(transform.position, leftHand.transform.position) + "LEFTHAND");
-        Debug.Log(Vector3.Distance(transform.position, rightHand.transform.position) + "RIGHTHAND");
         if (Vector3.Distance(transform.position, leftHand.transform.position) < Vector3.Distance(transform.position, rightHand.transform.position))
         {
-            Debug.Log("FLAG");
             closestHand = leftHand;
             if (previousClosest != closestHand)
             {
-                Debug.Log("Switching hands rotation for the LEFT hand now.");
                 
                 previousClosest = leftHand;
                 transform.rotation = new Quaternion(0, 0, 0, 0);
@@ -34,7 +30,6 @@ public class HandleManager : MonoBehaviour
             closestHand = rightHand;
             if (previousClosest != closestHand)
             {
-                Debug.Log("Switching hands rotation for the RIGHT hand now.");
                 previousClosest = leftHand;
                 transform.rotation = new Quaternion(0, 0, 180, 0);
             }
