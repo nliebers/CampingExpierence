@@ -11,8 +11,10 @@ public class CraftManager : MonoBehaviour
 	private bool containsStick;
 	
 	void OnTriggerEnter(Collider other) {
-		if (other.transform.gameObject.tag == stick.tag && !containsStick){
-			AddItem(other.transform.gameObject);
+		if (other.transform.gameObject != null) {
+			if (other.transform.gameObject.tag == "stick" && !containsStick){
+				AddItem(other.transform.gameObject);
+			}
 		}
 	}
 	
@@ -27,14 +29,15 @@ public class CraftManager : MonoBehaviour
 	void UpdateBuildables(){
 		if(containsStick) {
 			foreach(GameObject i in currentItems) {
-				if (i.tag == stick.tag){
+				if (i.tag == "stick"){
 					currentItems.Remove(i);
-					//Destroy(i);
 					Instantiate(spear, spawnLocation.transform.position, Quaternion.identity);
 					containsStick = false;
+					Destroy(i);
 					return;
 				}
 			}
 		}
 	}
+
 }
