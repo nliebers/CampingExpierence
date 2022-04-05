@@ -9,7 +9,7 @@ public class WanderingAI : MonoBehaviour {
 	public bool dead = false;
     public GameObject player;
 	public TextMeshProUGUI fishingTask;
-    public Transform deadFish;
+    private GameObject deadFish;
 	private GameObject TaskManager;
  
     private Transform target;
@@ -22,6 +22,7 @@ public class WanderingAI : MonoBehaviour {
 		movingAnim = transform.GetComponent<Animation>();
 		TaskManager = GameObject.Find("TaskManager");
 		movingAnim.Play("fin");
+        deadFish = GameObject.Find("TailorsculptedLOD0WithAnim");
 	}
  
     void OnEnable () {
