@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BoilingManager : MonoBehaviour
 {
@@ -8,9 +9,10 @@ public class BoilingManager : MonoBehaviour
 	public GameObject fire;
 	public int boilingDistanceThreshold;
 	public GameObject boilingEffect;
-	private int timer = 3000;
+	private int timer = 1500;
 	private bool boiling = false;
-	public GameObject waterJounralEntry;
+	public TextMeshProUGUI waterJounralEntry;
+	public GameObject TaskManager;
 	
 	void FixedUpdate() {
 		if (boiling) {
@@ -27,7 +29,8 @@ public class BoilingManager : MonoBehaviour
 		}
 		if (timer <= 0) {
 			boiling = false;
-			waterJounralEntry.SetActive(true);
+			waterJounralEntry.text = "<s>-  Gather Drinking Water</s>";
+			TaskManager.GetComponent<TaskManager>().water = true;
 		}
     }
 }
