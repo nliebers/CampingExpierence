@@ -18,6 +18,18 @@ public class EndScreenManager : MonoBehaviour
 	public bool fire;
 	public bool food;
 	private GameObject TaskManager;
+	public float timeRemaining = 10;
+	public GameObject loadScene;
+	
+	void Update () {
+		if (timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
+        }
+		else {
+			loadScene.SetActive(true);
+		}
+	}
 	
     void Start()
     {
@@ -32,6 +44,8 @@ public class EndScreenManager : MonoBehaviour
 		else {
 			survivedText.GetComponent<TextMeshPro>().text = "YOU DIED!";
 		}
+		
+		
 		if (fish){
 			fishText.GetComponent<TextMeshPro>().text += "Yes";
 		}
