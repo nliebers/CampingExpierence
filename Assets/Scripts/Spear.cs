@@ -53,7 +53,16 @@ namespace Valve.VR.InteractionSystem
 			if (leftHand != null || rightHand != null)
 			{
 				Vector3 greatestVelo = Vector3.Max(leftHand.GetComponent<HandPhysics>().handCollider.GetComponent<Rigidbody>().velocity, rightHand.GetComponent<HandPhysics>().handCollider.GetComponent<Rigidbody>().velocity);
-				transform.GetComponent<Rigidbody>().velocity = tipForward * greatestVelo.magnitude * 10f;
+				if(greatestVelo.magnitude < 5f)
+				{
+					transform.GetComponent<Rigidbody>().velocity = tipForward * greatestVelo.magnitude * 10f;
+				}
+				else
+				{
+					transform.GetComponent<Rigidbody>().velocity = tipForward * greatestVelo.magnitude;
+				}
+				
+				Debug.Log("Magnitude: " + greatestVelo.magnitude.ToString());
 			}
 
 			travelledFrames = 0;

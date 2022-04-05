@@ -21172,7 +21172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5664448290796567205, guid: a96a7b2f402d1004fab0a48d2a6c4fad, type: 3}
       propertyPath: releaseVelocityStyle
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5664448290796567205, guid: a96a7b2f402d1004fab0a48d2a6c4fad, type: 3}
       propertyPath: scaleReleaseVelocity
@@ -23824,6 +23824,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012749712888, guid: a0d21cd28590bbc47acda6deb8afc734, type: 3}
+      propertyPath: doNotDestroy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 387233921646903453, guid: a0d21cd28590bbc47acda6deb8afc734, type: 3}
       propertyPath: m_Name
       value: SuitcaseClue
@@ -23858,7 +23862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2622859245999131329, guid: a0d21cd28590bbc47acda6deb8afc734, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2703957930725021890, guid: a0d21cd28590bbc47acda6deb8afc734, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -54797,7 +54801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b713b90799083204caf072c7867b23e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 30
+  timeRemaining: 120
   loadScene: {fileID: 977781836}
   timerText: {fileID: 275613386}
 --- !u!4 &2112792884

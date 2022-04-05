@@ -9,7 +9,7 @@ public class BoilingManager : MonoBehaviour
 	public GameObject fire;
 	public int boilingDistanceThreshold;
 	public GameObject boilingEffect;
-	private int timer = 3000;
+	private int timer = 1500;
 	private bool boiling = false;
 	public TextMeshProUGUI waterJounralEntry;
 	public GameObject TaskManager;
@@ -29,7 +29,7 @@ public class BoilingManager : MonoBehaviour
 		}
 		if (timer <= 0) {
 			boiling = false;
-			waterJounralEntry.text = "<s>-  Catch Fish</s>";
+			waterJounralEntry.text = "<s>-  Gather Drinking Water</s>";
 			TaskManager.GetComponent<TaskManager>().water = true;
 		}
     }
