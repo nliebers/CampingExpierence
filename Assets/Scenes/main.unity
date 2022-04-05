@@ -8803,6 +8803,7 @@ MonoBehaviour:
   water: 0
   fire: 0
   food: 0
+  day: 1
 --- !u!4 &489727303
 Transform:
   m_ObjectHideFlags: 0
@@ -54310,7 +54311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b713b90799083204caf072c7867b23e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 150
+  timeRemaining: 10
   loadScene: {fileID: 977781836}
 --- !u!4 &2112792884
 Transform:

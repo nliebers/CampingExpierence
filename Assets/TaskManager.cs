@@ -9,6 +9,7 @@ public class TaskManager : MonoBehaviour
 	public bool water;
 	public bool fire;
 	public bool food;
+	public int day = 1;
 	
     void Awake() {
 		DontDestroyOnLoad(this.gameObject);
