@@ -9,6 +9,7 @@ public class WanderingAI : MonoBehaviour {
 	public bool dead = false;
     public GameObject player;
 	public TextMeshProUGUI fishingTask;
+    public Transform deadFish;
 	private GameObject TaskManager;
  
     private Transform target;
@@ -84,5 +85,6 @@ public class WanderingAI : MonoBehaviour {
 		movingAnim.Play("dead");
 		agent.ResetPath();
 		agent.SetDestination(dest);
+        Instantiate(deadFish, new Vector3(-142, 46, -130), Quaternion.identity);
 	}
 }
