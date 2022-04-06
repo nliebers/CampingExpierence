@@ -7,8 +7,10 @@ public class CraftManager : MonoBehaviour
     public GameObject stick;
 	public GameObject spear;
 	public GameObject spawnLocation;
-	private HashSet<GameObject> currentItems = new HashSet<GameObject>();
-	private bool containsStick;
+	public HashSet<GameObject> currentItems = new HashSet<GameObject>();
+	public bool containsStick;
+	public GameObject spearButton;
+	public GameObject stakeButton;
 	
 	void OnTriggerEnter(Collider other) {
 		if (other.transform.gameObject != null) {
@@ -26,9 +28,11 @@ public class CraftManager : MonoBehaviour
 		UpdateBuildables();
 	}
 	
-	void UpdateBuildables(){
+	public void UpdateBuildables(){
 		if(containsStick) {
-			foreach(GameObject i in currentItems) {
+			spearButton.SetActive(true);
+			stakeButton.SetActive(true);
+/* 			foreach(GameObject i in currentItems) {
 				if (i.tag == "stick"){
 					currentItems.Remove(i);
 					Instantiate(spear, spawnLocation.transform.position, Quaternion.identity);
@@ -36,7 +40,11 @@ public class CraftManager : MonoBehaviour
 					Destroy(i);
 					return;
 				}
-			}
+			} */
+		}
+		else {
+			spearButton.SetActive(false);
+			stakeButton.SetActive(false);
 		}
 	}
 

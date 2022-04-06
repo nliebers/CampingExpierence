@@ -10041,13 +10041,14 @@ GameObject:
   - component: {fileID: 515139085}
   - component: {fileID: 515139084}
   - component: {fileID: 515139083}
+  - component: {fileID: 515139086}
   m_Layer: 0
   m_Name: buildSpear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &515139082
 Transform:
   m_ObjectHideFlags: 0
@@ -10070,7 +10071,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515139081}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10124,6 +10125,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515139081}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &515139086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515139081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836177bb8f0bd854eb6de6e8a38eee2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  craftTable: {fileID: 1034427913}
+  spear: {fileID: 520461237}
+  spawnLocation: {fileID: 1551031856}
 --- !u!1 &517521390 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1419409294811694250, guid: a0df67d231840354790b9ff555274bbf, type: 3}
@@ -25909,6 +25925,9 @@ MonoBehaviour:
   stick: {fileID: 299480884}
   spear: {fileID: 520461237}
   spawnLocation: {fileID: 1551031856}
+  containsStick: 0
+  spearButton: {fileID: 515139081}
+  stakeButton: {fileID: 1863478025}
 --- !u!65 &1034427915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41762,13 +41781,14 @@ GameObject:
   - component: {fileID: 1863478029}
   - component: {fileID: 1863478028}
   - component: {fileID: 1863478027}
+  - component: {fileID: 1863478030}
   m_Layer: 0
   m_Name: buildStakes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1863478026
 Transform:
   m_ObjectHideFlags: 0
@@ -41791,7 +41811,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863478025}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -41845,6 +41865,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863478025}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1863478030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863478025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bcf0b734c20714ca63755a8f16d371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  craftTable: {fileID: 1034427913}
+  stake: {fileID: 3515361656943240785}
+  spawnLocation: {fileID: 1551031856}
 --- !u!1 &1864724181 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7944080207474916467, guid: a0df67d231840354790b9ff555274bbf, type: 3}
@@ -57425,6 +57460,11 @@ Transform:
   m_Father: {fileID: 8087230190907158060}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3515361656943240785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9017262836460556044, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
+  m_PrefabInstance: {fileID: 5614530832148556125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4288203520727923947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
