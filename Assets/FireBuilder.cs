@@ -19,7 +19,7 @@ namespace Valve.VR.InteractionSystem
         public int fireBuildProximity = 3;
         public GameObject[] campFireSticks;
 
-        void Update()
+      /*  void Update()
         {
             if (grabPinch.GetState(leftHand) || grabPinch.GetState(rightHand))
             {
@@ -29,16 +29,16 @@ namespace Valve.VR.InteractionSystem
             {
                 openHands = true;
             }
-        } 
+        } */
 
         private void OnTriggerEnter(Collider other)
         {
-            if ((other.transform.gameObject.tag == "stick" && !(completed)) && openHands)
+            if ((other.transform.gameObject.tag == "stick" && !(completed)) /* && openHands */ )
             {
                 // Attempt at solving the grab bug by forcing the item to drop from the player hand, deactivating it, then destroying it. Still a no go
-                other.GetComponent<Interactable>().attachedToHand.DetachObject(this.gameObject, false);
+                // other.GetComponent<Interactable>().attachedToHand.DetachObject(this.gameObject, false);
                 other.transform.gameObject.SetActive(false);
-                Destroy(other);
+                // Destroy(other);
 
 
                 campFireSticks[stickCount].SetActive(true);
