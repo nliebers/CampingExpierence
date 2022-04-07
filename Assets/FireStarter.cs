@@ -19,8 +19,8 @@ namespace Valve.VR.InteractionSystem
         private int sparkingChance;
 
         public GameObject player;
-        public GameObject CampFire;
-        public GameObject fireRing;
+        public GameObject Fire;
+        public GameObject buildFireCollider;
         public GameObject leftHand;
         public GameObject rightHand;
 
@@ -29,7 +29,7 @@ namespace Valve.VR.InteractionSystem
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.gameObject.tag == "FireStick") {
+            if (other.transform.gameObject.tag == "FireStick" && FireBuilder.completed == true) {
                 sparkingChance = UnityEngine.Random.Range(1, 10);
                 if (sparkingChance == 2) {
                     SparkFire();
@@ -37,20 +37,12 @@ namespace Valve.VR.InteractionSystem
             }
         }
 
-        void FixedUpdate()
-        {
-            if (sparked)
-            {
-
-            }
-        }
-
         public void SparkFire()
         {
             Debug.Log("sparked");
-            if (Vector3.Distance(fireRing.transform.position, player.transform.position) <= fireProximity) {
+            if (Vector3.Distance(buildFireCollider.transform.position, player.transform.position) <= fireProximity) {
                 //set some game object active
-                CampFire.SetActive(true);
+                Fire.SetActive(true);
             }
             sparked = true;
             

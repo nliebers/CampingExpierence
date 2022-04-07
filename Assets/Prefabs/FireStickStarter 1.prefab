@@ -415,8 +415,8 @@ MonoBehaviour:
   sparked: 0
   fireProximity: 100
   player: {fileID: 0}
-  CampFire: {fileID: 0}
-  fireRing: {fileID: 0}
+  Fire: {fileID: 0}
+  buildFireCollider: {fileID: 0}
   leftHand: {fileID: 0}
   rightHand: {fileID: 0}
   tip: {fileID: 1200735607197696879}

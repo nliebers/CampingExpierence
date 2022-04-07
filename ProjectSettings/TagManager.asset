@@ -16,6 +16,7 @@ TagManager:
   - FireStick
   - river
   - stick
+  - buildFire
   layers:
   - Default
   - TransparentFX
