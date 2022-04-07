@@ -22,7 +22,7 @@ namespace Valve.VR.InteractionSystem
         public int fireBuildProximity = 3;
         public GameObject[] campFireSticks;
 
-        void Update()
+     /*   void Update()
         {
             if ((!grabPinch.GetState(leftHand)) && (!(grabPinch.GetState(rightHand))))
             {
@@ -31,11 +31,11 @@ namespace Valve.VR.InteractionSystem
             {
                 openHands = false;
             }
-        }
+        } */
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.gameObject.tag == "stick" && !(completed) && openHands)
+            if (other.transform.gameObject.tag == "stick" && !(completed) && !(grabPinch.GetState(leftHand)) && !(grabPinch.GetState(rightHand)))
             {
                 other.transform.gameObject.SetActive(false);
                 campFireSticks[stickCount].SetActive(true);
