@@ -17340,6 +17340,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stickCount: 0
+  grabPinch:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  leftHand: 1
+  rightHand: 2
   fireBuildProximity: 3
   campFireSticks:
   - {fileID: 7174689284539894585}
