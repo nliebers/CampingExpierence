@@ -12,7 +12,7 @@ public class ShelterBuilder : MonoBehaviour
     public void componentPlaced() {
 		componentsPlaced += 1;
 		if (componentsPlaced >= 9) {
-			journalEntry.text = "<s>-  Catch Fish</s>";
+			journalEntry.text = "<s>-  Build Shelter</s>";
 			TaskManager.GetComponent<TaskManager>().shelter = true;
 		}
 	}

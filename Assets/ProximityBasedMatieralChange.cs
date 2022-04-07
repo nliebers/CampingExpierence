@@ -16,14 +16,21 @@ public class ProximityBasedMatieralChange : MonoBehaviour
 		allPossibleObjects = GameObject.FindGameObjectsWithTag(objectTagName);
 	}
 
+	public void UpdatePossibleObjects() {
+		allPossibleObjects = GameObject.FindGameObjectsWithTag(objectTagName);
+	}
+
 
     void Update()
     {
         foreach(GameObject obj in allPossibleObjects) {
+			Debug.Log(allPossibleObjects);
+			Debug.Log(obj.name);
 			if (obj != null) {
 				if (Vector3.Distance(obj.transform.position, transform.position) <= proximity){
 					objectToChange.GetComponent<Renderer>().material = builtMatieral;
-					obj.SetActive(false);
+					obj.GetComponent<DestroyObjectManager>().needsToDestroy = true;
+					//obj.SetActive(false);
 				}
 			}
 		}
