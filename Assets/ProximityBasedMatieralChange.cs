@@ -9,6 +9,10 @@ public class ProximityBasedMatieralChange : MonoBehaviour
 	public Material builtMatieral;
 	public GameObject objectToChange;
 	public string objectTagName;
+	public bool useSpecialPoint;
+	public GameObject specialPoint;
+	public bool updateShelterProgress;
+	public GameObject shelter;
 	private GameObject objectUsed;
 	private GameObject[] allPossibleObjects;
 	
@@ -24,12 +28,14 @@ public class ProximityBasedMatieralChange : MonoBehaviour
     void Update()
     {
         foreach(GameObject obj in allPossibleObjects) {
-			Debug.Log(allPossibleObjects);
-			Debug.Log(obj.name);
 			if (obj != null) {
-				if (Vector3.Distance(obj.transform.position, transform.position) <= proximity){
+				if (Vector3.Distance(obj.transform.position, transform.position) <= proximity && !useSpecialPoint || (useSpecialPoint && 
+				Vector3.Distance(obj.transform.position, specialPoint.transform.position) <= proximity)){
 					objectToChange.GetComponent<Renderer>().material = builtMatieral;
 					obj.GetComponent<DestroyObjectManager>().needsToDestroy = true;
+					if (updateShelterProgress) {
+						shelter.GetComponent<ShelterBuilder>().componentPlaced();
+					}
 					//obj.SetActive(false);
 				}
 			}

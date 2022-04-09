@@ -38,6 +38,7 @@ public class EndScreenManager : MonoBehaviour
 		TaskManager.GetComponent<TaskManager>().water,TaskManager.GetComponent<TaskManager>().fire, TaskManager.GetComponent<TaskManager>().food);
 		water = TaskManager.GetComponent<TaskManager>().water;
 		fish = TaskManager.GetComponent<TaskManager>().fish;
+		shelter = TaskManager.GetComponent<TaskManager>().shelter;
 		if (score >= 200) {
 			survivedText.GetComponent<TextMeshPro>().text = "YOU SURVIVED!";
 		}
@@ -58,6 +59,12 @@ public class EndScreenManager : MonoBehaviour
 		else {
 			waterText.GetComponent<TextMeshPro>().text += "No";
 		}
+		if (shelter){
+			shelterText.GetComponent<TextMeshPro>().text += "Yes";
+		}
+		else {
+			shelterText.GetComponent<TextMeshPro>().text += "No";
+		}
 		
     }
 	
@@ -66,7 +73,7 @@ public class EndScreenManager : MonoBehaviour
 			return 0;
 		}
 		else if (day == 1){
-			return (int) Convert.ToInt32(shelter) * 100 + (int) Convert.ToInt32(water) * 100 + (int) Convert.ToInt32(fish) * 100 + (int) Convert.ToInt32(fire) * 100 + (int) Convert.ToInt32(food) * 100;
+			return (int) Convert.ToInt32(shelter) * 200 + (int) Convert.ToInt32(water) * 100 + (int) Convert.ToInt32(fish) * 100 + (int) Convert.ToInt32(fire) * 100 + (int) Convert.ToInt32(food) * 100;
 		}
 		return 0;
 	}

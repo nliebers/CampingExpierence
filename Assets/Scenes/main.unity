@@ -1360,6 +1360,10 @@ MonoBehaviour:
   builtMatieral: {fileID: 2100000, guid: fb4fae0d93a554047aa1d1750ec53e7e, type: 2}
   objectToChange: {fileID: 1746963205}
   objectTagName: grabablestake
+  useSpecialPoint: 0
+  specialPoint: {fileID: 0}
+  updateShelterProgress: 1
+  shelter: {fileID: 1583218042}
 --- !u!1001 &85564632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4965,6 +4969,16 @@ PrefabInstance:
     - {fileID: 5598852657652303841, guid: 6729d31ee23a4d14aa953d25b7d5de60, type: 3}
     - {fileID: 5598852657652303854, guid: 6729d31ee23a4d14aa953d25b7d5de60, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6729d31ee23a4d14aa953d25b7d5de60, type: 3}
+--- !u!4 &235304641 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4410742548794585138, guid: 6729d31ee23a4d14aa953d25b7d5de60, type: 3}
+  m_PrefabInstance: {fileID: 235304640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &235304642 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5598852657652303843, guid: 6729d31ee23a4d14aa953d25b7d5de60, type: 3}
+  m_PrefabInstance: {fileID: 235304640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &238137510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010968662070, guid: 30b99e7dc1382e346a7f9789de00de5e, type: 3}
@@ -5128,6 +5142,10 @@ MonoBehaviour:
   builtMatieral: {fileID: 2100000, guid: fb4fae0d93a554047aa1d1750ec53e7e, type: 2}
   objectToChange: {fileID: 413782624}
   objectTagName: grabablestake
+  useSpecialPoint: 0
+  specialPoint: {fileID: 0}
+  updateShelterProgress: 1
+  shelter: {fileID: 1583218042}
 --- !u!4 &264900541 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432170931947621671, guid: e397985946f918d4d84873a33044fe68, type: 3}
@@ -5498,6 +5516,10 @@ MonoBehaviour:
   builtMatieral: {fileID: 2100000, guid: fb4fae0d93a554047aa1d1750ec53e7e, type: 2}
   objectToChange: {fileID: 314715053}
   objectTagName: grabablestake
+  useSpecialPoint: 0
+  specialPoint: {fileID: 0}
+  updateShelterProgress: 1
+  shelter: {fileID: 1583218042}
 --- !u!1 &275613384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5787,6 +5809,10 @@ MonoBehaviour:
   builtMatieral: {fileID: 2100000, guid: a7019b9f081b0654ba32205a2bc3d987, type: 2}
   objectToChange: {fileID: 282695709}
   objectTagName: tarp
+  useSpecialPoint: 0
+  specialPoint: {fileID: 0}
+  updateShelterProgress: 1
+  shelter: {fileID: 1583218042}
 --- !u!1001 &282898925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7769,6 +7795,10 @@ MonoBehaviour:
   builtMatieral: {fileID: 2100000, guid: fb4fae0d93a554047aa1d1750ec53e7e, type: 2}
   objectToChange: {fileID: 1445598892}
   objectTagName: grabablestake
+  useSpecialPoint: 0
+  specialPoint: {fileID: 0}
+  updateShelterProgress: 1
+  shelter: {fileID: 1583218042}
 --- !u!4 &388726917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432170931947621671, guid: e397985946f918d4d84873a33044fe68, type: 3}
@@ -10323,6 +10353,10 @@ MonoBehaviour:
   builtMatieral: {fileID: 2100000, guid: fb4fae0d93a554047aa1d1750ec53e7e, type: 2}
   objectToChange: {fileID: 1864724181}
   objectTagName: grabablestake
+  useSpecialPoint: 0
+  specialPoint: {fileID: 0}
+  updateShelterProgress: 1
+  shelter: {fileID: 1583218042}
 --- !u!1 &520461237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5664448290796567204, guid: a96a7b2f402d1004fab0a48d2a6c4fad, type: 3}
@@ -25397,10 +25431,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceca3bb24a0cbe84fa5a3d8a58361f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proximity: 4
+  proximity: 3
   builtMatieral: {fileID: 2100000, guid: fb4fae0d93a554047aa1d1750ec53e7e, type: 2}
   objectToChange: {fileID: 1002525094}
   objectTagName: bigstick
+  useSpecialPoint: 1
+  specialPoint: {fileID: 1930551232}
+  updateShelterProgress: 1
+  shelter: {fileID: 1583218042}
 --- !u!1 &1002697261
 GameObject:
   m_ObjectHideFlags: 0
@@ -36224,6 +36262,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e397985946f918d4d84873a33044fe68, type: 3}
+--- !u!1 &1587182975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587182976}
+  m_Layer: 0
+  m_Name: specialPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1587182976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587182975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.31, y: 1.43, z: -0.04}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 235304642}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1587862483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36900,6 +36968,10 @@ MonoBehaviour:
   builtMatieral: {fileID: 2100000, guid: fb4fae0d93a554047aa1d1750ec53e7e, type: 2}
   objectToChange: {fileID: 579726079}
   objectTagName: grabablestake
+  useSpecialPoint: 0
+  specialPoint: {fileID: 0}
+  updateShelterProgress: 1
+  shelter: {fileID: 1583218042}
 --- !u!4 &1617100825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432170931947621671, guid: e397985946f918d4d84873a33044fe68, type: 3}
@@ -39608,10 +39680,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceca3bb24a0cbe84fa5a3d8a58361f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proximity: 4
+  proximity: 3
   builtMatieral: {fileID: 2100000, guid: fb4fae0d93a554047aa1d1750ec53e7e, type: 2}
   objectToChange: {fileID: 1759613838}
   objectTagName: bigstick
+  useSpecialPoint: 1
+  specialPoint: {fileID: 1587182975}
+  updateShelterProgress: 1
+  shelter: {fileID: 1583218042}
 --- !u!1001 &1760886389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42940,6 +43016,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7432170931947621671, guid: e397985946f918d4d84873a33044fe68, type: 3}
   m_PrefabInstance: {fileID: 1736064739}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1930551232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930551233}
+  m_Layer: 0
+  m_Name: specialPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1930551233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930551232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.98, y: 1.59, z: -0.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 235304641}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1930897966
 PrefabInstance:
   m_ObjectHideFlags: 0
