@@ -9,7 +9,9 @@ public class WanderingAI : MonoBehaviour {
 	public bool dead = false;
     public GameObject player;
 	public TextMeshProUGUI fishingTask;
+    private GameObject deadFish;
 	private GameObject TaskManager;
+    private GameObject table;
  
     private Transform target;
 	private Animation movingAnim;
@@ -21,6 +23,8 @@ public class WanderingAI : MonoBehaviour {
 		movingAnim = transform.GetComponent<Animation>();
 		TaskManager = GameObject.Find("TaskManager");
 		movingAnim.Play("fin");
+        deadFish = GameObject.Find("TailorsculptedLOD0WithAnim");
+        table = GameObject.Find("FishTable");
 	}
  
     void OnEnable () {
@@ -84,5 +88,7 @@ public class WanderingAI : MonoBehaviour {
 		movingAnim.Play("dead");
 		agent.ResetPath();
 		agent.SetDestination(dest);
+        Vector3 locationOnTable = new Vector3(Random.Range(table.transform.position.x - .6f, table.transform.position.x + .6f), table.transform.position.y + 1.5f, Random.Range(table.transform.position.z - .6f, table.transform.position.z + .6f));
+        Instantiate(deadFish, locationOnTable, Quaternion.identity * Quaternion.Euler(90f, 0f, 0f));
 	}
 }
