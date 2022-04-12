@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2031762198186206738}
   - component: {fileID: 2031762198186206739}
   - component: {fileID: 2031762198186206750}
+  - component: {fileID: 7191109382575509912}
   m_Layer: 0
   m_Name: GroundStick
   m_TagString: stick
@@ -221,3 +222,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7441922820662428346, guid: 7a84f374f667c1f4e925696a2e9c39ef, type: 3}
+--- !u!114 &7191109382575509912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031762198186206737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5193bf7142947674dbb4e0e2a4bc01db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needsToDestroy: 0
+  letGo: 1
