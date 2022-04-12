@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace Valve.VR.InteractionSystem
 {
@@ -23,6 +24,8 @@ namespace Valve.VR.InteractionSystem
         public GameObject buildFireCollider;
         public GameObject leftHand;
         public GameObject rightHand;
+		public GameObject TaskManager;
+		public TextMeshProUGUI fireJournalEntry; 
 
         public GameObject tip;
 
@@ -42,6 +45,8 @@ namespace Valve.VR.InteractionSystem
             Debug.Log("sparked");
             if (Vector3.Distance(buildFireCollider.transform.position, player.transform.position) <= fireProximity) {
                 Fire.SetActive(true);
+				fireJournalEntry.text = "<s>-  Start a Fire</s>";
+				TaskManager.GetComponent<TaskManager>().fire = true;
             }
             sparked = true;
             

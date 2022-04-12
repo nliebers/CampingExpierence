@@ -710,11 +710,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2031762198186206737, guid: 8b9ae1b6203e6df448b266b1b06049c1, type: 3}
   m_PrefabInstance: {fileID: 345318674}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &16535974
+--- !u!114 &16535968 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7191109382575509912, guid: 8b9ae1b6203e6df448b266b1b06049c1, type: 3}
+  m_PrefabInstance: {fileID: 345318674}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16535967}
   m_Enabled: 1
@@ -722,8 +721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5193bf7142947674dbb4e0e2a4bc01db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needsToDestroy: 0
-  letGo: 1
 --- !u!1001 &19787557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7322,7 +7319,7 @@ PrefabInstance:
     - target: {fileID: 2031762198186206739, guid: 8b9ae1b6203e6df448b266b1b06049c1, type: 3}
       propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 16535974}
+      objectReference: {fileID: 16535968}
     - target: {fileID: 2031762198186206739, guid: 8b9ae1b6203e6df448b266b1b06049c1, type: 3}
       propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -7358,7 +7355,7 @@ PrefabInstance:
     - target: {fileID: 2031762198186206739, guid: 8b9ae1b6203e6df448b266b1b06049c1, type: 3}
       propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 16535974}
+      objectReference: {fileID: 16535968}
     - target: {fileID: 2031762198186206739, guid: 8b9ae1b6203e6df448b266b1b06049c1, type: 3}
       propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -8650,11 +8647,10 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2031762198186206736, guid: 8b9ae1b6203e6df448b266b1b06049c1, type: 3}
   m_PrefabInstance: {fileID: 1036618242}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &402337492
+--- !u!114 &402337492 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7191109382575509912, guid: 8b9ae1b6203e6df448b266b1b06049c1, type: 3}
+  m_PrefabInstance: {fileID: 1036618242}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402337490}
   m_Enabled: 1
@@ -8662,8 +8658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5193bf7142947674dbb4e0e2a4bc01db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needsToDestroy: 0
-  letGo: 1
 --- !u!1001 &404573220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12330,6 +12324,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1762246299}
     - target: {fileID: 1034900440887368083, guid: e71311d0b59072e42ae7a24766cc699f, type: 3}
+      propertyPath: TaskManager
+      value: 
+      objectReference: {fileID: 489727301}
+    - target: {fileID: 1034900440887368083, guid: e71311d0b59072e42ae7a24766cc699f, type: 3}
+      propertyPath: fireJournalEntry
+      value: 
+      objectReference: {fileID: 619729631}
+    - target: {fileID: 1034900440887368083, guid: e71311d0b59072e42ae7a24766cc699f, type: 3}
       propertyPath: buildFireCollider
       value: 
       objectReference: {fileID: 919132148090519747}
@@ -12587,6 +12589,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000010968662070, guid: 30b99e7dc1382e346a7f9789de00de5e, type: 3}
   m_PrefabInstance: {fileID: 951496584}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &619729631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4986131402134857810, guid: a0d21cd28590bbc47acda6deb8afc734, type: 3}
+  m_PrefabInstance: {fileID: 987592680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &622773789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45932,9 +45945,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1762246299}
     - target: {fileID: 1034900440887368083, guid: e71311d0b59072e42ae7a24766cc699f, type: 3}
+      propertyPath: TaskManager
+      value: 
+      objectReference: {fileID: 489727301}
+    - target: {fileID: 1034900440887368083, guid: e71311d0b59072e42ae7a24766cc699f, type: 3}
       propertyPath: fireProximity
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1034900440887368083, guid: e71311d0b59072e42ae7a24766cc699f, type: 3}
+      propertyPath: fireJournalEntry
+      value: 
+      objectReference: {fileID: 619729631}
     - target: {fileID: 1034900440887368083, guid: e71311d0b59072e42ae7a24766cc699f, type: 3}
       propertyPath: sparkingVelocity
       value: 1

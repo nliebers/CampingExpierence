@@ -31,6 +31,8 @@ public class EndScreenManager : MonoBehaviour
 		water = TaskManager.GetComponent<TaskManager>().water;
 		fish = TaskManager.GetComponent<TaskManager>().fish;
 		shelter = TaskManager.GetComponent<TaskManager>().shelter;
+		food = TaskManager.GetComponent<TaskManager>().food;
+		fire = TaskManager.GetComponent<TaskManager>().fire;
 		if (score >= 200) {
 			survivedText.GetComponent<TextMeshPro>().text = "YOU SURVIVED!";
 			continueButton.SetActive(true);
@@ -57,6 +59,18 @@ public class EndScreenManager : MonoBehaviour
 		}
 		else {
 			shelterText.GetComponent<TextMeshPro>().text += "No";
+		}
+		if (food){
+			foodText.GetComponent<TextMeshPro>().text += "Yes";
+		}
+		else {
+			foodText.GetComponent<TextMeshPro>().text += "No";
+		}
+		if (fire){
+			fireText.GetComponent<TextMeshPro>().text += "Yes";
+		}
+		else {
+			fireText.GetComponent<TextMeshPro>().text += "No";
 		}
 		
     }

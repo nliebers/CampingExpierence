@@ -51,11 +51,11 @@ public class CookingManager : MonoBehaviour
         {
             Debug.Log("right matieral");
             cookedJounralEntry.text = "<s>-  Cook food</s>";
-            TaskManager.GetComponent<TaskManager>().fish = true;
+            TaskManager.GetComponent<TaskManager>().food = true;
         }
         else {
             cookedJounralEntry.text = "-  Cook food";
-            TaskManager.GetComponent<TaskManager>().fish = false;
+            TaskManager.GetComponent<TaskManager>().food = false;
         }
     }
 }
