@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 1337255922}
   - component: {fileID: 1337255924}
   - component: {fileID: 1337255925}
+  - component: {fileID: 2021399044}
   m_Layer: 0
   m_Name: TailorsculptedLOD0WithAnim
   m_TagString: Fish
@@ -298,6 +299,25 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &2021399044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356194643468298557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9abc21866d3de41897f57729b2e8ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pan: {fileID: 0}
+  fire: {fileID: 0}
+  radius: 2
+  cookedMaterial: {fileID: 2100000, guid: bfc104433233ec1429d5181d09a22d68, type: 2}
+  burntMaterial: {fileID: 2100000, guid: 65a616edcae025f4c9829d324106ba05, type: 2}
+  cookedJounralEntry: {fileID: 0}
+  TaskManager: {fileID: 0}
 --- !u!1 &1995764693566008476
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +607,7 @@ GameObject:
   - component: {fileID: 166376515}
   m_Layer: 0
   m_Name: Tailor_LOD0
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

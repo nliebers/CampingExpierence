@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 20508826}
   - component: {fileID: 20508825}
   - component: {fileID: 20508824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: return
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1871,7 +1871,7 @@ GameObject:
   - component: {fileID: 449763622}
   - component: {fileID: 449763621}
   - component: {fileID: 449763620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5942,7 +5942,7 @@ GameObject:
   - component: {fileID: 1392809375}
   - component: {fileID: 1392809374}
   - component: {fileID: 1392809373}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: togglePage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9282,9 +9282,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsClickable:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   grabPinch:
-    actionPath: 
+    actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   thisHand: 0
   continueSign: {fileID: 449763619}

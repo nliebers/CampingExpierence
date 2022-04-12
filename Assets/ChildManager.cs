@@ -37,7 +37,7 @@ public class ChildManager : MonoBehaviour
             //other.transform.parent = this.gameObject.transform;
             other.transform.parent.SetParent(null);
             Debug.Log(this.gameObject.transform);
-
+            other.transform.parent.gameObject.GetComponent<CookingManager>().checkCooked();
         }
     }
 }
