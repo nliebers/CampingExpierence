@@ -16,6 +16,9 @@ TagManager:
   - FireStick
   - river
   - stick
+  - bigstick
+  - grabablestake
+  - tarp
   layers:
   - Default
   - TransparentFX
