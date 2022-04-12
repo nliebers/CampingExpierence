@@ -29,7 +29,7 @@ namespace Valve.VR.InteractionSystem
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.gameObject.tag == "FireStick") {
+            if (other.transform.gameObject.tag == "FireStick" && buildFireCollider.GetComponent<FireBuilder>().fireBuilt) {
                 sparkingChance = UnityEngine.Random.Range(1, 20);
                 if (sparkingChance == 2) {
                     SparkFire();
