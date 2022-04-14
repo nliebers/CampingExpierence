@@ -45,6 +45,7 @@ namespace Valve.VR.InteractionSystem
             Debug.Log("sparked");
             if (Vector3.Distance(buildFireCollider.transform.position, player.transform.position) <= fireProximity) {
                 Fire.SetActive(true);
+				transform.Find("spark").gameObject.SetActive(true);
 				fireJournalEntry.text = "<s>-  Start a Fire</s>";
 				TaskManager.GetComponent<TaskManager>().fire = true;
             }

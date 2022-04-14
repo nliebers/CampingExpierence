@@ -46,10 +46,8 @@ public class CookingManager : MonoBehaviour
 
     public void checkCooked()
     {
-        Debug.Log("checking cook");
         if (cookedCorrectly)
         {
-            Debug.Log("right matieral");
             cookedJounralEntry.text = "<s>-  Cook food</s>";
             TaskManager.GetComponent<TaskManager>().food = true;
         }
