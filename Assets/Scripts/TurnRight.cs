@@ -9,8 +9,8 @@ public class TurnRight : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 		if (other.transform.gameObject.tag == "Player") {
-			//sail.transform.Rotate(0, 15, 0, Space.World);
-			gameObject.transform.parent.transform.Rotate(0, 15, 0, Space.World);
+			sail.transform.Rotate(0, 15, 0, Space.World);
+			//gameObject.transform.parent.transform.Rotate(0, 15, 0, Space.World);
 		}
 	}
 }

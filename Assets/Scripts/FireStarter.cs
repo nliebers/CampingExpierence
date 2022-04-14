@@ -33,7 +33,7 @@ namespace Valve.VR.InteractionSystem
         private void OnTriggerEnter(Collider other)
         {
             if (other.transform.gameObject.tag == "FireStick" && buildFireCollider.GetComponent<FireBuilder>().fireBuilt) {
-                sparkingChance = UnityEngine.Random.Range(1, 20);
+                sparkingChance = UnityEngine.Random.Range(1, 100);
                 if (sparkingChance == 2) {
                     SparkFire();
                 }
@@ -45,8 +45,8 @@ namespace Valve.VR.InteractionSystem
             Debug.Log("sparked");
             if (Vector3.Distance(buildFireCollider.transform.position, player.transform.position) <= fireProximity) {
                 Fire.SetActive(true);
-				transform.Find("spark").gameObject.SetActive(true);
-				fireJournalEntry.text = "<s>-  Start a Fire</s>";
+                transform.Find("spark").gameObject.SetActive(true);
+                fireJournalEntry.text = "<s>-  Start a Fire</s>";
 				TaskManager.GetComponent<TaskManager>().fire = true;
             }
             sparked = true;

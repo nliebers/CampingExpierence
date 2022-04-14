@@ -2793,8 +2793,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.25
-      minScalar: 0.1
+      scalar: 1
+      minScalar: 0.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -34838,6 +34838,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4533379349525563790, guid: a96a7b2f402d1004fab0a48d2a6c4fad, type: 3}
   m_PrefabInstance: {fileID: 885649799}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1187785853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2013775515184511405, guid: 5b2d00f5ed0c59f4385747c8ec04b5ac, type: 3}
+  m_PrefabInstance: {fileID: 506479639206718631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1188731091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38506,8 +38511,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.25
-      minScalar: 0.1
+      scalar: 1
+      minScalar: 0.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -68412,9 +68417,17 @@ PrefabInstance:
       value: Raft
       objectReference: {fileID: 0}
     - target: {fileID: 7911672808501718147, guid: 5b2d00f5ed0c59f4385747c8ec04b5ac, type: 3}
+      propertyPath: sail
+      value: 
+      objectReference: {fileID: 1187785853}
+    - target: {fileID: 7911672808501718147, guid: 5b2d00f5ed0c59f4385747c8ec04b5ac, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1138084946}
+    - target: {fileID: 7911672808501718147, guid: 5b2d00f5ed0c59f4385747c8ec04b5ac, type: 3}
+      propertyPath: touchpad.actionPath
+      value: /actions/default/in/NewAction
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b2d00f5ed0c59f4385747c8ec04b5ac, type: 3}
 --- !u!4 &543450652616137337

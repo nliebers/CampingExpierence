@@ -17,7 +17,6 @@ public class BoilingManager : MonoBehaviour
 	void FixedUpdate() {
 		if (boiling) {
 			timer -= 1;
-			Debug.Log(timer);
 		}
 	}
 	
