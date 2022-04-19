@@ -13,12 +13,13 @@ public class CookingManager : MonoBehaviour
     public Material burntMaterial;
     private float timer;
     public TextMeshProUGUI cookedJounralEntry;
-    public GameObject TaskManager;
+    private GameObject TaskManager;
     private bool cookedCorrectly;
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
+		TaskManager = GameObject.Find("TaskManager");
     }
 
     // Update is called once per frame

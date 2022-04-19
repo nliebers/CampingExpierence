@@ -12,7 +12,11 @@ public class BoilingManager : MonoBehaviour
 	private int timer = 1500;
 	private bool boiling = false;
 	public TextMeshProUGUI waterJounralEntry;
-	public GameObject TaskManager;
+	private GameObject TaskManager;
+	
+	void Start() {
+		TaskManager = GameObject.Find("TaskManager");
+	}
 	
 	void FixedUpdate() {
 		if (boiling) {

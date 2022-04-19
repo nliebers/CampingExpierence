@@ -14,10 +14,15 @@ public class ProximityBasedMatieralChange : MonoBehaviour
 	public bool updateShelterProgress;
 	public GameObject shelter;
 	private GameObject objectUsed;
+	private GameObject TaskManager;
 	private GameObject[] allPossibleObjects;
 	
 	void Start() {
 		allPossibleObjects = GameObject.FindGameObjectsWithTag(objectTagName);
+		TaskManager = GameObject.Find("TaskManager");
+		if (updateShelterProgress && TaskManager.GetComponent<TaskManager>().shelter) {
+			objectToChange.GetComponent<Renderer>().material = builtMatieral;
+		}
 	}
 
 	public void UpdatePossibleObjects() {

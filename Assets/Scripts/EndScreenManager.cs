@@ -35,6 +35,7 @@ public class EndScreenManager : MonoBehaviour
 		fire = TaskManager.GetComponent<TaskManager>().fire;
 		if (score >= 200) {
 			survivedText.GetComponent<TextMeshPro>().text = "YOU SURVIVED!";
+			TaskManager.GetComponent<TaskManager>().ResetDay();
 			continueButton.SetActive(true);
 		}
 		else {

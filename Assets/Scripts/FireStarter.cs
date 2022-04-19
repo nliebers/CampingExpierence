@@ -24,11 +24,14 @@ namespace Valve.VR.InteractionSystem
         public GameObject buildFireCollider;
         public GameObject leftHand;
         public GameObject rightHand;
-		public GameObject TaskManager;
+		private GameObject TaskManager;
 		public TextMeshProUGUI fireJournalEntry; 
 
         public GameObject tip;
 
+		void Start() {
+			TaskManager = GameObject.Find("TaskManager");
+		}
 
         private void OnTriggerEnter(Collider other)
         {

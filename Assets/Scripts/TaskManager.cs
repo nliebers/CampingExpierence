@@ -21,4 +21,12 @@ public class TaskManager : MonoBehaviour
 			Destroy(gameObject);
 		}
 	}
+	
+	public void ResetDay() {
+		day += 1;
+		fish = false;
+		water = false;
+		fire = false;
+		food = false;
+	}
 }
