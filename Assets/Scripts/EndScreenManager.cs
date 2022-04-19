@@ -14,6 +14,7 @@ public class EndScreenManager : MonoBehaviour
 	public GameObject foodText;
 	public GameObject descriptiveText;
 	public GameObject continueButton;
+	public GameObject continueText;
 	public bool shelter;
 	public bool fish;
 	public bool water;
@@ -37,6 +38,7 @@ public class EndScreenManager : MonoBehaviour
 			survivedText.GetComponent<TextMeshPro>().text = "YOU SURVIVED!";
 			TaskManager.GetComponent<TaskManager>().ResetDay();
 			continueButton.SetActive(true);
+			continueText.SetActive(true);
 		}
 		else {
 			survivedText.GetComponent<TextMeshPro>().text = "YOU DIED!";
@@ -77,12 +79,17 @@ public class EndScreenManager : MonoBehaviour
     }
 	
 	private int CalculateSurvivalScore(int day, bool shelter, bool fish, bool water, bool fire, bool food){
-		if (day == 1 && !shelter){
+		if (day == 1 && !shelter)
+		{
 			descriptiveText.GetComponent<TextMeshPro>().text += "Unfortunately you were unable to build sufficient shelter to make it through the first night.";
 			return 0;
 		}
-		else if (day == 1){
-			return (int) Convert.ToInt32(shelter) * 200 + (int) Convert.ToInt32(water) * 100 + (int) Convert.ToInt32(fish) * 100 + (int) Convert.ToInt32(fire) * 100 + (int) Convert.ToInt32(food) * 100;
+		else if (day == 1)
+		{
+			return (int)Convert.ToInt32(shelter) * 200 + (int)Convert.ToInt32(water) * 100 + (int)Convert.ToInt32(fish) * 100 + (int)Convert.ToInt32(fire) * 100 + (int)Convert.ToInt32(food) * 100;
+		}
+		else {
+			return (int)Convert.ToInt32(water) * 100 + (int)Convert.ToInt32(fish) * 100 + (int)Convert.ToInt32(fire) * 100 + (int)Convert.ToInt32(food) * 100;
 		}
 		return 0;
 	}

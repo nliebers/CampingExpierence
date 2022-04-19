@@ -16,12 +16,14 @@ public class ProximityBasedMatieralChange : MonoBehaviour
 	private GameObject objectUsed;
 	private GameObject TaskManager;
 	private GameObject[] allPossibleObjects;
+	private bool placed;
 	
 	void Start() {
 		allPossibleObjects = GameObject.FindGameObjectsWithTag(objectTagName);
 		TaskManager = GameObject.Find("TaskManager");
 		if (updateShelterProgress && TaskManager.GetComponent<TaskManager>().shelter) {
 			objectToChange.GetComponent<Renderer>().material = builtMatieral;
+			placed = true;
 		}
 	}
 
@@ -34,14 +36,14 @@ public class ProximityBasedMatieralChange : MonoBehaviour
     {
         foreach(GameObject obj in allPossibleObjects) {
 			if (obj != null) {
-				if (Vector3.Distance(obj.transform.position, transform.position) <= proximity && !useSpecialPoint || (useSpecialPoint && 
-				Vector3.Distance(obj.transform.position, specialPoint.transform.position) <= proximity)){
+				if ((Vector3.Distance(obj.transform.position, transform.position) <= proximity && !useSpecialPoint || (useSpecialPoint && 
+				Vector3.Distance(obj.transform.position, specialPoint.transform.position) <= proximity)) && !placed){
 					objectToChange.GetComponent<Renderer>().material = builtMatieral;
 					obj.GetComponent<DestroyObjectManager>().needsToDestroy = true;
 					if (updateShelterProgress) {
 						shelter.GetComponent<ShelterBuilder>().componentPlaced();
+						placed = true;
 					}
-					//obj.SetActive(false);
 				}
 			}
 		}

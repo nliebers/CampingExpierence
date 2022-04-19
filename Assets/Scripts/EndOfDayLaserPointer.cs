@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Valve.VR;
+using TMPro;
 
 public class EndOfDayLaserPointer : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class EndOfDayLaserPointer : MonoBehaviour
 	public GameObject foodText;
 	public GameObject descriptiveText;
 	public GameObject togglePageButton;
-	public Material rightArrow;
+    public TextMeshProUGUI toggleText;
+    public Material rightArrow;
 	public Material leftArrow;
 	
 	private int currentPage;
@@ -112,7 +114,7 @@ public class EndOfDayLaserPointer : MonoBehaviour
 			fireText.SetActive(false);
 			fishText.SetActive(false);
 			descriptiveText.SetActive(true);
-			togglePageButton.GetComponent<Renderer>().material = leftArrow;
+            toggleText.text = "Back";
 			currentPage = 2;
 		}
 		else {
@@ -123,8 +125,8 @@ public class EndOfDayLaserPointer : MonoBehaviour
 			fireText.SetActive(true);
 			fishText.SetActive(true);
 			descriptiveText.SetActive(false);
-			togglePageButton.GetComponent<Renderer>().material = rightArrow;
-			currentPage = 1;
+            toggleText.text = "Next";
+            currentPage = 1;
 		}
 	}
 

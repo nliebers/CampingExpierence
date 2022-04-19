@@ -15,6 +15,7 @@ public class CookingManager : MonoBehaviour
     public TextMeshProUGUI cookedJounralEntry;
     private GameObject TaskManager;
     private bool cookedCorrectly;
+    private bool audioPlaying;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,10 @@ public class CookingManager : MonoBehaviour
             if ((Vector3.Distance(this.gameObject.transform.position, fire.transform.position) < radius) && this.gameObject.transform.IsChildOf(pan.transform))
             {
                 timer += Time.deltaTime;
+                if (!audioPlaying) {
+                    pan.GetComponent<AudioSource>().Play();
+                    audioPlaying = true;
+                }
                 if (timer > 5)
                 {
                     this.gameObject.transform.GetChild(1).GetComponent<Renderer>().material = cookedMaterial;
@@ -40,6 +45,10 @@ public class CookingManager : MonoBehaviour
                     this.gameObject.transform.GetChild(1).GetComponent<Renderer>().material = burntMaterial;
                     cookedCorrectly = false;
                 }
+            }
+            else {
+                pan.GetComponent<AudioSource>().Stop();
+                audioPlaying = false;
             }
         }
 
