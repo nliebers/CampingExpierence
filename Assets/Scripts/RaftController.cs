@@ -20,9 +20,7 @@ public class RaftController : MonoBehaviour
     void Update()
     {
         if (Vector3.Distance(player.transform.position, transform.position) <= 5.0f ){
-			Debug.Log(touchpad.GetAxis(SteamVR_Input_Sources.LeftHand));
 			if (touchpad.GetActive(SteamVR_Input_Sources.LeftHand)) {
-				Debug.Log(-90 - (Mathf.Atan2(touchpad.GetAxis(SteamVR_Input_Sources.LeftHand).x, touchpad.GetAxis(SteamVR_Input_Sources.LeftHand).y) * Mathf.Rad2Deg * Mathf.Sign(touchpad.GetAxis(SteamVR_Input_Sources.LeftHand).x)));
 				//sail.transform.rotation = new Quaternion(0, -90 - (Mathf.Atan2(touchpad.GetAxis(SteamVR_Input_Sources.LeftHand).x, touchpad.GetAxis(SteamVR_Input_Sources.LeftHand).y) * Mathf.Rad2Deg * Mathf.Sign(touchpad.GetAxis(SteamVR_Input_Sources.LeftHand).x)), 0, 0);
 				sail.transform.eulerAngles = new Vector3(
 					sail.transform.eulerAngles.x,

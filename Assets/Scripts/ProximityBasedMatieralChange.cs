@@ -13,10 +13,13 @@ public class ProximityBasedMatieralChange : MonoBehaviour
 	public GameObject specialPoint;
 	public bool updateShelterProgress;
 	public GameObject shelter;
+	public bool useAudio;
+	public AudioSource audio;
 	private GameObject objectUsed;
 	private GameObject TaskManager;
 	private GameObject[] allPossibleObjects;
 	private bool placed;
+
 	
 	void Start() {
 		allPossibleObjects = GameObject.FindGameObjectsWithTag(objectTagName);
@@ -39,6 +42,9 @@ public class ProximityBasedMatieralChange : MonoBehaviour
 				if ((Vector3.Distance(obj.transform.position, transform.position) <= proximity && !useSpecialPoint || (useSpecialPoint && 
 				Vector3.Distance(obj.transform.position, specialPoint.transform.position) <= proximity)) && !placed){
 					objectToChange.GetComponent<Renderer>().material = builtMatieral;
+					if (useAudio) {
+						audio.Play(); 
+					}
 					obj.GetComponent<DestroyObjectManager>().needsToDestroy = true;
 					if (updateShelterProgress) {
 						shelter.GetComponent<ShelterBuilder>().componentPlaced();
