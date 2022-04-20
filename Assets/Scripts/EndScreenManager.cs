@@ -81,15 +81,40 @@ public class EndScreenManager : MonoBehaviour
 	private int CalculateSurvivalScore(int day, bool shelter, bool fish, bool water, bool fire, bool food){
 		if (day == 1 && !shelter)
 		{
-			descriptiveText.GetComponent<TextMeshPro>().text += "Unfortunately you were unable to build sufficient shelter to make it through the first night.";
+			descriptiveText.GetComponent<TextMeshPro>().text += "Unfortunately you were unable to build sufficient shelter to make it through the first night.  Return to the main menu and see if you can survive for 3 days.";
 			return 0;
 		}
 		else if (day == 1)
 		{
+			descriptiveText.GetComponent<TextMeshPro>().text += "Great, you were able to build a shelter and survived the first night!";
+			if (water) {
+				descriptiveText.GetComponent<TextMeshPro>().text += "You were also able to get some drinking water, you will probably have to get more tomorrow.";
+			}
+			if (fire) {
+				descriptiveText.GetComponent<TextMeshPro>().text += "You also found enough wood to build a fire, unfortunately it burned out late in the night.";
+			}
+			if (fish) {
+				descriptiveText.GetComponent<TextMeshPro>().text += "You used your great skill to catch " +  TaskManager.GetComponent<TaskManager>().fishCaught.ToString() + "fish.";
+			}
+			if (food) {
+				descriptiveText.GetComponent<TextMeshPro>().text += "You cooked some of that fish for food.";
+			}
 			return (int)Convert.ToInt32(shelter) * 200 + (int)Convert.ToInt32(water) * 100 + (int)Convert.ToInt32(fish) * 100 + (int)Convert.ToInt32(fire) * 100 + (int)Convert.ToInt32(food) * 100;
 		}
 		else {
-			return (int)Convert.ToInt32(water) * 100 + (int)Convert.ToInt32(fish) * 100 + (int)Convert.ToInt32(fire) * 100 + (int)Convert.ToInt32(food) * 100;
+			if (water) {
+				descriptiveText.GetComponent<TextMeshPro>().text += "You were also able to get some drinking water, you will probably have to get more tomorrow.";
+			}
+			if (fire) {
+				descriptiveText.GetComponent<TextMeshPro>().text += "You also found enough wood to build a fire, unfortunately it burned out late in the night.";
+			}
+			if (fish) {
+				descriptiveText.GetComponent<TextMeshPro>().text += "You used your great skill to catch " +  TaskManager.GetComponent<TaskManager>().fishCaught.ToString() + "fish.";
+			}
+			if (food) {
+				descriptiveText.GetComponent<TextMeshPro>().text += "You cooked some of that fish for food.";
+			}
+			return (int)Convert.ToInt32(water) * 150 + (int)Convert.ToInt32(fish) * 150 + (int)Convert.ToInt32(fire) * 150 + (int)Convert.ToInt32(food) * 150;
 		}
 		return 0;
 	}

@@ -9,6 +9,7 @@ public class TaskManager : MonoBehaviour
 	public bool water;
 	public bool fire;
 	public bool food;
+	public int fishCaught;
 	private static TaskManager taskManagerInstance;
 	public int day = 1;
 	
@@ -24,6 +25,7 @@ public class TaskManager : MonoBehaviour
 	
 	public void ResetDay() {
 		day += 1;
+		fishCaught = 0;
 		fish = false;
 		water = false;
 		fire = false;

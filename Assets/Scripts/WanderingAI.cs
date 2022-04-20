@@ -84,6 +84,7 @@ public class WanderingAI : MonoBehaviour {
 		Vector3 dest = transform.position + new Vector3(0.0f, 1.0f, 0.0f);
 		fishingTask.text = "<s>-  Catch Fish</s>";
 		TaskManager.GetComponent<TaskManager>().fish = true;
+		TaskManager.GetComponent<TaskManager>().fishCaught += 1;
 		movingAnim.Stop("fin");
 		movingAnim.Play("dead");
 		agent.ResetPath();
