@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 using Valve.VR;
 
 public class RaftController : MonoBehaviour
@@ -11,15 +12,23 @@ public class RaftController : MonoBehaviour
 	public GameObject mountPoint;
 	public GameObject sailDirection;
 	public SteamVR_Action_Vector2 touchpad;
+	public Hand leftHand;
 	public GameObject sail;
+	private bool tipShown;
 
-	void OnEnable () {
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
-    }
+	void OnEnable() {
+		agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+	}
 
-    void Update()
-    {
-        if (Vector3.Distance(player.transform.position, transform.position) <= 5.0f ){
+	void Update()
+	{
+		if (Vector3.Distance(player.transform.position, transform.position) <= 5.0f) {
+			if (!tipShown) {
+				ControllerButtonHints.ShowButtonHint(leftHand, touchpad);
+				ControllerButtonHints.ShowTextHint(leftHand, touchpad, "Rotate Sail", true);
+				StartCoroutine(Countdown(5));
+				tipShown = true;
+			}
 			if (touchpad.GetActive(SteamVR_Input_Sources.LeftHand)) {
 				//sail.transform.rotation = new Quaternion(0, -90 - (Mathf.Atan2(touchpad.GetAxis(SteamVR_Input_Sources.LeftHand).x, touchpad.GetAxis(SteamVR_Input_Sources.LeftHand).y) * Mathf.Rad2Deg * Mathf.Sign(touchpad.GetAxis(SteamVR_Input_Sources.LeftHand).x)), 0, 0);
 				sail.transform.eulerAngles = new Vector3(
@@ -31,10 +40,18 @@ public class RaftController : MonoBehaviour
 			//sail.transform.Rotate(0, 15, 0, Space.World);
 			player.transform.position = mountPoint.transform.position;
 			Vector3 newPos = sailDirection.transform.forward * 1.0f;
-            agent.SetDestination(transform.position + newPos);
+			agent.SetDestination(transform.position + newPos);
 		}
-    }
-	
+	}
+
+	IEnumerator Countdown(int seconds)
+	{
+		yield return new WaitForSeconds(5);
+		Debug.Log("my son");
+		ControllerButtonHints.HideTextHint(leftHand, touchpad);
+		ControllerButtonHints.HideButtonHint(leftHand, touchpad);
+	}
+
 	private void FaceTarget(Vector3 destination)
 	{
 		Vector3 lookPos = agent.destination - transform.position;
