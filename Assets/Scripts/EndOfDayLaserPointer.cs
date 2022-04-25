@@ -25,6 +25,7 @@ public class EndOfDayLaserPointer : MonoBehaviour
     public Material rightArrow;
 	public Material leftArrow;
 	
+	private GameObject TaskManager;
 	private int currentPage;
     private float maxDistance = 100f;
     private LineRenderer lr;
@@ -35,6 +36,7 @@ public class EndOfDayLaserPointer : MonoBehaviour
     {
         lr = GetComponent<LineRenderer>();
 		currentPage = 1;
+		TaskManager = GameObject.Find("TaskManager");
     }
 
     // Update is called once per frame
@@ -78,7 +80,12 @@ public class EndOfDayLaserPointer : MonoBehaviour
     void Continue()
 	{
         // SceneManager.LoadScene("main");
-        continueSign.transform.Find("LoadLevel").transform.gameObject.SetActive(true);
+		if (TaskManager.GetComponent<TaskManager>().day >= 3){
+			continueSign.transform.Find("LoadLevelFinal").transform.gameObject.SetActive(true);
+		}
+		else {
+			continueSign.transform.Find("LoadLevel").transform.gameObject.SetActive(true);
+		}
         //StartCoroutine(LevelManager.Instance.ResetPlayer());
         //ResetPlayer();
     }
