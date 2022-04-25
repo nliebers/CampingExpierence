@@ -10,7 +10,6 @@ public class FinalLaserPointer : MonoBehaviour
     public LayerMask whatIsClickable;
     public SteamVR_Action_Boolean grabPinch;
     public SteamVR_Input_Sources thisHand;
-    public GameObject continueSign;
 	public GameObject returnMenuSign;
     public GameObject player;
 	public GameObject titleText;

@@ -34,6 +34,7 @@ public class EndScreenManager : MonoBehaviour
 		shelter = TaskManager.GetComponent<TaskManager>().shelter;
 		food = TaskManager.GetComponent<TaskManager>().food;
 		fire = TaskManager.GetComponent<TaskManager>().fire;
+		TaskManager.GetComponent<TaskManager>().totalScore += score;
 		if (score >= 200) {
 			survivedText.GetComponent<TextMeshPro>().text = "YOU SURVIVED!";
 			TaskManager.GetComponent<TaskManager>().ResetDay();

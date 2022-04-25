@@ -7,6 +7,7 @@ public class FinalScreenManager : MonoBehaviour
 {
     private GameObject TaskManager;
 	public TextMeshProUGUI descriptionText;
+	public TextMeshProUGUI pageTwoText;
 	
     void Start()
     {
@@ -18,6 +19,9 @@ public class FinalScreenManager : MonoBehaviour
 		else {
 			descriptionText.text += "You still have no memory of why you were in the forest to begin with.  Regardless, it will be good to get back home.";
 		}
+		
+		pageTwoText.text = "You did a great job surviving, here are some of your final stats.  You caught a total of " + TaskManager.GetComponent<TaskManager>().fishCaught.ToString();
+		pageTwoText.text += "You also finished with a final score of " + TaskManager.GetComponent<TaskManager>().totalScore.ToString() + "out of a possible 1800.";
     }
 
 }
