@@ -9,6 +9,10 @@ public class TaskManager : MonoBehaviour
 	public bool water;
 	public bool fire;
 	public bool food;
+	public bool postcard;
+	public bool plane;
+	public bool flyer;
+	public bool suitcase;
 	public int fishCaught;
 	private static TaskManager taskManagerInstance;
 	public int day = 1;

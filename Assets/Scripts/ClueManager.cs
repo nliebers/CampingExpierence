@@ -8,9 +8,11 @@ public class ClueManager : MonoBehaviour
 	public GameObject suitcaseJournalEntry;
 	public GameObject flightmagazineJournalEntry;
 	public GameObject airplaneWingJournalEntry;
+	private GameObject TaskManager;
 	private Dictionary<string, GameObject> clues = new Dictionary <string, GameObject>();
 	
 	public void Start() {
+		TaskManager = GameObject.Find("TaskManager");
 		clues.Add("postcard", postCardJounalEntry);
 		clues.Add("suitcase", suitcaseJournalEntry);
 		clues.Add("flightmagazine", flightmagazineJournalEntry);
@@ -19,6 +21,18 @@ public class ClueManager : MonoBehaviour
 	
 	public void CompleteClue(string clue) {
 		clues[clue].SetActive(true);
+		if (clue == "postcard"){
+			TaskManager.GetComponent<TaskManager>().postcard = true;
+		}
+		if (clue == "suitcase"){
+			TaskManager.GetComponent<TaskManager>().suitcase = true;
+		}
+		if (clue == "flightmagazine"){
+			TaskManager.GetComponent<TaskManager>().flyer = true;
+		}
+		if (clue == "airplane"){
+			TaskManager.GetComponent<TaskManager>().plane = true;
+		}
 		gameObject.GetComponent<AudioSource>().Play();
 	}
 }
