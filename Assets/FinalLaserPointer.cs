@@ -17,7 +17,8 @@ public class FinalLaserPointer : MonoBehaviour
 	public GameObject descriptiveText;
 	public GameObject togglePageButton;
     public TextMeshProUGUI toggleText;
-	
+
+    private GameObject TaskManager;
 	private int currentPage;
     private float maxDistance = 100f;
     private LineRenderer lr;
@@ -26,6 +27,7 @@ public class FinalLaserPointer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TaskManager = GameObject.Find("TaskManager");
         lr = GetComponent<LineRenderer>();
 		currentPage = 1;
     }
@@ -66,6 +68,7 @@ public class FinalLaserPointer : MonoBehaviour
 	
 	void ReturnMenu()
 	{
+        TaskManager.GetComponent<TaskManager>().ResetGame();
         returnMenuSign.transform.Find("LoadLevel").transform.gameObject.SetActive(true);
 	}
 

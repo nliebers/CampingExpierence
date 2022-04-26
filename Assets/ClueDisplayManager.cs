@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class ClueDisplayManager : MonoBehaviour
 {
-    public GameObject journalClue;
+	public GameObject postcardClue;
+	public GameObject suitcaseClue;
+	public GameObject flyerClue;
+	public GameObject planeClue;
+
 	private GameObject TaskManager;
 	
     void Start()
     {
 		TaskManager = GameObject.Find("TaskManager");
-		if (journalClue.name == "PostCardClue"){
-			journalClue.SetActive(TaskManager.GetComponent<TaskManager>().postcard);
-		}
-        if (journalClue.name == "SuitcaseClue"){
-			journalClue.SetActive(TaskManager.GetComponent<TaskManager>().suitcase);
-		}
-		if (journalClue.name == "FlightMagazineClue"){
-			journalClue.SetActive(TaskManager.GetComponent<TaskManager>().flyer);
-		}
-		if (journalClue.name == "AirplaneClue"){
-			journalClue.SetActive(TaskManager.GetComponent<TaskManager>().plane);
-		}
-		
+		postcardClue.SetActive(TaskManager.GetComponent<TaskManager>().postcard);
+		suitcaseClue.SetActive(TaskManager.GetComponent<TaskManager>().suitcase);
+		flyerClue.SetActive(TaskManager.GetComponent<TaskManager>().flyer);
+		planeClue.SetActive(TaskManager.GetComponent<TaskManager>().plane);		
     }
 
 }

@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndOfDay.unity
     guid: e8fbd62b328681f44877385794add21f
+  - enabled: 1
+    path: Assets/Scenes/Rescue.unity
+    guid: 2cdde3821d0fe5a4683342ea14cbd6de
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: c9dae88ce4bd7e54b8e0700f04b0a03d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e09689d5064e8914a93a75d4378732f0, type: 2}

@@ -109,6 +109,7 @@ public class EndOfDayLaserPointer : MonoBehaviour
 
     void ReturnMenu()
 	{
+        TaskManager.GetComponent<TaskManager>().ResetGame();
         returnMenuSign.transform.Find("LoadLevel").transform.gameObject.SetActive(true);
 	}
 	

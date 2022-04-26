@@ -36,4 +36,20 @@ public class TaskManager : MonoBehaviour
 		fire = false;
 		food = false;
 	}
+
+	public void ResetGame()
+	{
+		day = 1;
+		fishCaught = 0;
+		fish = false;
+		shelter = false;
+		water = false;
+		food = false;
+		fire = false;
+		postcard = false;
+		plane = false;
+		flyer = false;
+		suitcase = false;
+		totalScore = 0;
+	}
 }
