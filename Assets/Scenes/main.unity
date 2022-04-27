@@ -33213,7 +33213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7477e8ac9bd9116408db81f84fbc1f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GroundStick: {fileID: 1445748354}
+  GroundStick: {fileID: 299480884}
 --- !u!1001 &649174659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59213,11 +59213,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7944080207474916467, guid: a0df67d231840354790b9ff555274bbf, type: 3}
   m_PrefabInstance: {fileID: 97287628}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1445748354 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2031762198186206737, guid: 8b9ae1b6203e6df448b266b1b06049c1, type: 3}
-  m_PrefabInstance: {fileID: 1729645014}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1447188645 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010968662070, guid: 30b99e7dc1382e346a7f9789de00de5e, type: 3}
@@ -65176,7 +65171,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7191109382575509912, guid: 8b9ae1b6203e6df448b266b1b06049c1, type: 3}
   m_PrefabInstance: {fileID: 1729645014}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445748354}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5193bf7142947674dbb4e0e2a4bc01db, type: 3}
