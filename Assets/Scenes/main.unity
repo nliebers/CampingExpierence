@@ -6276,6 +6276,7 @@ MonoBehaviour:
   shelter: {fileID: 1583218042}
   useAudio: 1
   audio: {fileID: 85201502}
+  parent: {fileID: 282695709}
 --- !u!1001 &85564632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20040,6 +20041,7 @@ MonoBehaviour:
   shelter: {fileID: 1583218042}
   useAudio: 1
   audio: {fileID: 264044638}
+  parent: {fileID: 282695709}
 --- !u!4 &264900541 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432170931947621671, guid: e397985946f918d4d84873a33044fe68, type: 3}
@@ -20496,6 +20498,7 @@ MonoBehaviour:
   shelter: {fileID: 1583218042}
   useAudio: 1
   audio: {fileID: 275588575}
+  parent: {fileID: 282695709}
 --- !u!1 &275613384
 GameObject:
   m_ObjectHideFlags: 0
@@ -20887,6 +20890,19 @@ MonoBehaviour:
   shelter: {fileID: 1583218042}
   useAudio: 1
   audio: {fileID: 282695710}
+  parent: {fileID: 282695709}
+--- !u!114 &282695714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282695709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f4d171a167631429eddcdbc427afdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &282898925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27838,6 +27854,7 @@ MonoBehaviour:
   shelter: {fileID: 1583218042}
   useAudio: 1
   audio: {fileID: 386849231}
+  parent: {fileID: 282695709}
 --- !u!4 &388726917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432170931947621671, guid: e397985946f918d4d84873a33044fe68, type: 3}
@@ -30364,6 +30381,7 @@ MonoBehaviour:
   shelter: {fileID: 1583218042}
   useAudio: 1
   audio: {fileID: 517521391}
+  parent: {fileID: 282695709}
 --- !u!1 &520461237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5664448290796567204, guid: a96a7b2f402d1004fab0a48d2a6c4fad, type: 3}
@@ -33171,13 +33189,13 @@ Transform:
   - {fileID: 1752457606}
   - {fileID: 1447943891}
   - {fileID: 402337491}
+  - {fileID: 7410037819948251399}
   - {fileID: 1729645015}
   - {fileID: 87195917}
   - {fileID: 2036717698}
   - {fileID: 125425298}
   - {fileID: 884306623}
   - {fileID: 1461455938}
-  - {fileID: 7410037819948251399}
   - {fileID: 1425119664}
   - {fileID: 1729034053}
   m_Father: {fileID: 0}
@@ -45812,6 +45830,7 @@ MonoBehaviour:
   shelter: {fileID: 1583218042}
   useAudio: 1
   audio: {fileID: 1002525095}
+  parent: {fileID: 282695709}
 --- !u!1 &1002697261
 GameObject:
   m_ObjectHideFlags: 0
@@ -62565,6 +62584,7 @@ MonoBehaviour:
   shelter: {fileID: 1583218042}
   useAudio: 1
   audio: {fileID: 1615714489}
+  parent: {fileID: 282695709}
 --- !u!4 &1617100825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432170931947621671, guid: e397985946f918d4d84873a33044fe68, type: 3}
@@ -66024,6 +66044,7 @@ MonoBehaviour:
   shelter: {fileID: 1583218042}
   useAudio: 1
   audio: {fileID: 1759613839}
+  parent: {fileID: 282695709}
 --- !u!1001 &1760886389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86401,7 +86422,7 @@ Transform:
   m_Children:
   - {fileID: 356026198}
   m_Father: {fileID: 646961927}
-  m_RootOrder: 15
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &7415656453046396689
 MeshRenderer:
