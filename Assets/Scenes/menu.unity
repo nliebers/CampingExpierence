@@ -5007,8 +5007,8 @@ MonoBehaviour:
   loadingScreen: {fileID: 0}
   progressBarEmpty: {fileID: 0}
   progressBarFull: {fileID: 0}
-  loadingScreenWidthInMeters: 6
-  progressBarWidthInMeters: 3
+  loadingScreenWidthInMeters: 0
+  progressBarWidthInMeters: 0
   loadingScreenDistance: 0
   loadingScreenTransform: {fileID: 0}
   progressBarTransform: {fileID: 0}
@@ -5020,10 +5020,10 @@ MonoBehaviour:
   bottom: {fileID: 0}
   backgroundColor: {r: 0, g: 0, b: 0, a: 1}
   showGrid: 0
-  fadeOutTime: 2
-  fadeInTime: 2
+  fadeOutTime: 0
+  fadeInTime: 5
   postLoadSettleTime: 1
-  loadingScreenFadeInTime: 1
+  loadingScreenFadeInTime: 15
   loadingScreenFadeOutTime: 0.25
   autoTriggerOnEnable: 1
 --- !u!82 &1369945825
@@ -5036,9 +5036,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eea08128dd03e64409bf9ff744d0493c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e1314fcfee5f3df4fbc588fd14111828, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.323
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
