@@ -5004,11 +5004,11 @@ MonoBehaviour:
   internalProcessArgs: 
   loadAdditive: 0
   loadAsync: 1
-  loadingScreen: {fileID: 0}
+  loadingScreen: {fileID: 2800000, guid: 8cab6aa3331da40e68754e2214ce08fa, type: 3}
   progressBarEmpty: {fileID: 0}
   progressBarFull: {fileID: 0}
-  loadingScreenWidthInMeters: 0
-  progressBarWidthInMeters: 0
+  loadingScreenWidthInMeters: 6
+  progressBarWidthInMeters: 3
   loadingScreenDistance: 0
   loadingScreenTransform: {fileID: 0}
   progressBarTransform: {fileID: 0}
@@ -5020,10 +5020,10 @@ MonoBehaviour:
   bottom: {fileID: 0}
   backgroundColor: {r: 0, g: 0, b: 0, a: 1}
   showGrid: 0
-  fadeOutTime: 0
+  fadeOutTime: 2
   fadeInTime: 5
   postLoadSettleTime: 1
-  loadingScreenFadeInTime: 15
+  loadingScreenFadeInTime: 20
   loadingScreenFadeOutTime: 0.25
   autoTriggerOnEnable: 1
 --- !u!82 &1369945825
