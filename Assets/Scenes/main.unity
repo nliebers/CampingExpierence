@@ -1175,7 +1175,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.9528302, g: 0.41948494, b: 0.41948494, a: 1}
+      maxColor: {r: 0.5177456, g: 0.9529412, b: 0.41960788, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -12642,7 +12642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.43
+      value: -25.29
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12686,7 +12686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9017262836460556044, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
@@ -14949,7 +14949,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.9528302, g: 0.41948494, b: 0.41948494, a: 1}
+      maxColor: {r: 0.50938016, g: 0.9529412, b: 0.41960788, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -22833,7 +22833,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.9528302, g: 0.41948494, b: 0.41948494, a: 1}
+      maxColor: {r: 0.5619469, g: 0.9529412, b: 0.41960788, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -29872,7 +29872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.44
+      value: -25.300001
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29916,7 +29916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9017262836460556044, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
@@ -66053,7 +66053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.46
+      value: -25.32
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -66097,7 +66097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9017262836460556044, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
@@ -66559,7 +66559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.45
+      value: -25.310001
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -66603,7 +66603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9017262836460556044, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
@@ -82950,7 +82950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b713b90799083204caf072c7867b23e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 120
+  timeRemaining: 15
   loadScene: {fileID: 977781836}
   timerText: {fileID: 275613386}
 --- !u!4 &2112792884
@@ -85883,7 +85883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.44
+      value: -25.3
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -85927,7 +85927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9017262836460556044, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
@@ -86256,7 +86256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.43
+      value: -25.29
       objectReference: {fileID: 0}
     - target: {fileID: 8532087544444114358, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -86300,7 +86300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9017262836460556044, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b12aad0c682644197e36f3c05e46cb, type: 3}
