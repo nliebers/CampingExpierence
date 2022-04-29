@@ -5,20 +5,22 @@ using UnityEngine;
 public class ClueVisibility : MonoBehaviour
 {
     private GameObject TaskManager;
+	public GameObject clue;
 	
     void Start()
     {
-        if(this.gameObject.name == "PostCard") {
-			this.gameObject.SetActive(!TaskManager.GetComponent<TaskManager>().postcard);
+		TaskManager = GameObject.Find("TaskManager");
+        if(clue.name == "PostCard") {
+			clue.SetActive(!TaskManager.GetComponent<TaskManager>().postcard);
 		}
-		if(this.gameObject.name == "Vintage_Suitcase_LP") {
-			this.gameObject.SetActive(!TaskManager.GetComponent<TaskManager>().suitcase);
+		if(clue.name == "Vintage_Suitcase_LP") {
+			clue.SetActive(!TaskManager.GetComponent<TaskManager>().suitcase);
 		}
-		if(this.gameObject.name == "flightmagazine") {
-			this.gameObject.SetActive(!TaskManager.GetComponent<TaskManager>().flyer);
+		if(clue.name == "flightmagazine") {
+			clue.SetActive(!TaskManager.GetComponent<TaskManager>().flyer);
 		}
-		if(this.gameObject.name == "airplane") {
-			this.gameObject.SetActive(!TaskManager.GetComponent<TaskManager>().plane);
+		if(clue.name == "airplane") {
+			clue.SetActive(!TaskManager.GetComponent<TaskManager>().plane);
 		}
     }
 
