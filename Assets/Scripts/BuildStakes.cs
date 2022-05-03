@@ -11,7 +11,6 @@ public class BuildStakes : MonoBehaviour
 	
     void OnTriggerEnter(Collider other){
 		if (other.transform.gameObject.name == "LeftHand" || other.transform.gameObject.name == "RightHand"){
-			Debug.Log(craftTable.GetComponent<CraftManager>().currentItems);
 			foreach(GameObject i in craftTable.GetComponent<CraftManager>().currentItems) {
 				if (i.tag == "stick"){
 					craftTable.GetComponent<CraftManager>().currentItems.Remove(i);
