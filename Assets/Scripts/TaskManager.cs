@@ -14,6 +14,7 @@ public class TaskManager : MonoBehaviour
 	public bool flyer;
 	public bool suitcase;
 	public int fishCaught;
+	public int totalfishCaught;
 	public int totalScore;
 	private static TaskManager taskManagerInstance;
 	public int day = 1;
