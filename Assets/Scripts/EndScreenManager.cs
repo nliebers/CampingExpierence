@@ -110,7 +110,7 @@ public class EndScreenManager : MonoBehaviour
 				descriptiveText.GetComponent<TextMeshPro>().text += "You also found enough wood to build a fire, unfortunately it burned out late in the night.";
 			}
 			if (fish) {
-				descriptiveText.GetComponent<TextMeshPro>().text += "You used your great skill to catch " +  TaskManager.GetComponent<TaskManager>().fishCaught.ToString() + "fish.";
+				descriptiveText.GetComponent<TextMeshPro>().text += "You used your great skill to catch " +  TaskManager.GetComponent<TaskManager>().fishCaught.ToString() + " fish.";
 			}
 			if (food) {
 				descriptiveText.GetComponent<TextMeshPro>().text += "You cooked some of that fish for food.";
