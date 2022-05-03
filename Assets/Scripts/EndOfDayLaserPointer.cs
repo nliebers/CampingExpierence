@@ -80,7 +80,7 @@ public class EndOfDayLaserPointer : MonoBehaviour
     void Continue()
 	{
         // SceneManager.LoadScene("main");
-		if (TaskManager.GetComponent<TaskManager>().day >= 3){
+		if (TaskManager.GetComponent<TaskManager>().day >= 4){
 			continueSign.transform.Find("LoadLevelFinal").transform.gameObject.SetActive(true);
 		}
 		else {
